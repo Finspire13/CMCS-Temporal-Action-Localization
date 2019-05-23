@@ -74,13 +74,8 @@ Our method is evaluated on THUMOS14 and ActivityNet with I3D or UNT features. Ex
 
 Our trained models are provided [in this folder](https://github.com/Finspire13/Weakly-Action-Detection/tree/Release-CVPR19/models). To use these trained models, run `test.py` and `detect.py` with the config files [in this folder](https://github.com/Finspire13/Weakly-Action-Detection/tree/Release-CVPR19/configs/trained).
 
-
-THCudaCheck FAIL file=/pytorch/aten/src/THC/THCGeneral.cpp line=405 error=11 : invalid argument
-
-clean up label and tool folders
-
 ## Citation
-TO DO
+To be added
 
 ## License
 MIT
