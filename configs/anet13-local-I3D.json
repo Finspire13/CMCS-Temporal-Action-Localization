@@ -1,0 +1,195 @@
+{
+    "experiment_naming":"anet13-local-I3D",
+
+    "dataset_name":"ActivityNet13",
+    
+    "feature_type":"i3d",
+    "feature_oversample":true,
+    "sample_rate":16,
+
+    "with_bg":true,
+    "diversity_reg":true,
+    "diversity_weight":0.2,
+
+    "train_run_num":1,
+
+    "training_max_len":null,
+    "feature_dim":1024,
+
+    "batch_size":32,
+    "learning_rate":1e-3,
+    "weight_decay":1e-4,
+    "learning_rate_decay":true,
+    
+    "max_step_num":30005,
+    "check_points":[
+        30000
+    ],
+    "log_freq":5000,
+    
+    "model_params":{
+        "class_num":null,
+        "dropout_rate":0.5,
+        "cls_branch_num":4,
+        "base_layer_params":[
+            [
+                256,
+                1
+            ]
+        ],
+        "cls_layer_params":[
+            [
+                128,
+                3
+            ]
+        ],
+        "att_layer_params":[
+            [
+                128,
+                1
+            ]
+        ]
+    },
+
+
+    "detect_params":{
+        "global_score_thrh":0.1,
+        "metric_type":"score",
+        "att_filtering_value":null,
+        "thrh_type":"mean",
+        "thrh_value":1e-7,
+        "interpolate_type":"linear",
+        "proc_type":"dilation",
+        "proc_value":1.25,
+        "sample_offset":0,
+        "weight_inner":1,
+        "weight_outter":-1,
+        "weight_global":0.25
+    },
+
+
+
+
+
+
+    "action_class_num":{
+        "thumos14":20,
+        "ActivityNet12":100,
+        "ActivityNet13":200
+    },
+    "base_sample_rate":{
+        "thumos14":{        
+            "i3d":4,
+            "untri":5
+        },
+        "ActivityNet12":{        
+            "i3d":16,
+            "untri":15
+        },
+        "ActivityNet13":{        
+            "i3d":16,
+            "untri":15
+        }
+    },
+    "base_snippet_size":{
+        "i3d":16,
+        "untri":null
+    },
+    "file_paths":{
+        "thumos14":{},
+
+        "ActivityNet12":{},
+
+        "ActivityNet13":{
+            "train":{
+                "anno_json_file": "./labels/activity_net.v1-3.min.json",
+                "bg_mask_dir": "../ANET_FEATURES/anet_flow_intensity/perc_25",
+                "feature_dir":{
+                    "untri-resize":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps/rgb-resize-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps/flow-resize-step15"
+                    },
+                    "untri-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/rgb-oversample-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/flow-oversample-step15"
+                    },
+                    "i3d-resize":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-resize-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-resize-step16"
+                    },
+                    "i3d-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-oversample-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-oversample-step16"
+                    }
+                }
+            },
+            "val":{
+                "anno_json_file": "./labels/activity_net.v1-3.min.json",
+                "bg_mask_dir": "../ANET_FEATURES/anet_flow_intensity/perc_25",
+                "feature_dir":{
+                    "untri-resize":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps/rgb-resize-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps/flow-resize-step15"
+                    },
+                    "untri-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/rgb-oversample-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/flow-oversample-step15"
+                    },
+                    "i3d-resize":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-resize-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-resize-step16"
+                    },
+                    "i3d-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-oversample-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-oversample-step16"
+                    }
+                }
+            },
+            "train_and_val": {
+                "anno_json_file": "./labels/activity_net.v1-3.min.json",
+                "bg_mask_dir": "../ANET_FEATURES/anet_flow_intensity/perc_25",
+                "feature_dir":{
+                    "untri-resize":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps/rgb-resize-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps/flow-resize-step15"
+                    },
+                    "untri-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/rgb-oversample-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/flow-oversample-step15"
+                    },
+                    "i3d-resize":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-resize-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-resize-step16"
+                    },
+                    "i3d-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-oversample-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-oversample-step16"
+                    }
+                }
+            },
+
+            "test":{
+                "anno_json_file": "./labels/activity_net.v1-3.min.json",
+                "bg_mask_dir": "../ANET_FEATURES/anet_flow_intensity/perc_25",
+                "feature_dir":{
+                    "untri-resize":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps/rgb-resize-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps/flow-resize-step15"
+                    },
+                    "untri-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/rgb-oversample-step15",
+                        "flow":"../ANET_FEATURES/anet_untri_feature_25fps_train_only/flow-oversample-step15"
+                    },
+                    "i3d-resize":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-resize-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-resize-step16"
+                    },
+                    "i3d-oversample":{
+                        "rgb":"../ANET_FEATURES/anet_i3d_feature_25fps/rgb-oversample-step16",
+                        "flow":"../ANET_FEATURES/anet_i3d_feature_25fps/flow-oversample-step16"
+                    }
+                }
+            }
+        }
+    }
+}

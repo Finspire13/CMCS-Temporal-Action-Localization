@@ -1,0 +1,10 @@
+__pycache__/*
+plots/*
+outputs/*
+temp_plots/*
+events*
+logs/*
+BoW/*
+cas-features/*
+scripts/*
+
