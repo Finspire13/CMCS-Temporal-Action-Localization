@@ -19,7 +19,7 @@ We employ UntrimmedNet or I3D features in the paper.
 
 1. Download the features:
 * [THUMOS14 Features](https://pan.baidu.com/s/1YT1KhKND5G_msZZ_zkWv9g)
-* ActivityNet Features(To Do)
+* [ActivityNet Features](https://pan.baidu.com/s/1KJxNE-_We-9AcBs0N6xTXA)(Input videos are 25fps)
 2. Join the zip files by `zip --fix {} --out {}` and unzip the files.
 3. Put the extracted folder into the parent folder of this repo. (Or change the paths in the config file.)
 
