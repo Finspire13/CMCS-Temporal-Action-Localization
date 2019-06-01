@@ -75,7 +75,13 @@ Our method is evaluated on THUMOS14 and ActivityNet with I3D or UNT features. Ex
 Our trained models are provided [in this folder](https://github.com/Finspire13/Weakly-Action-Detection/tree/Release-CVPR19/models). To use these trained models, run `test.py` and `detect.py` with the config files [in this folder](https://github.com/Finspire13/Weakly-Action-Detection/tree/Release-CVPR19/configs/trained).
 
 ## Citation
-To be added
+@InProceedings{Liu_2019_CVPR,
+author = {Liu, Daochang and Jiang, Tingting and Wang, Yizhou},
+title = {Completeness Modeling and Context Separation for Weakly Supervised Temporal Action Localization},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2019}
+}
 
 ## License
 MIT
