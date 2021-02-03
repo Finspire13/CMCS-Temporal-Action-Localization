@@ -36,7 +36,7 @@ Static clip masks are used for hard negative mining. They are included in the do
 If you want to generate the masks by yourself, please refer to `tools/get_flow_intensity_anet.py`.
 
 ### Check ActivityNet Videos
-URL links of some videos in this dataset are no longer valid. Check the availability and generate this file: [anet_missing_videos.npy](https://github.com/Finspire13/Weakly-Action-Detection/blob/Release-CVPR19/misc/anet_missing_videos.npy).
+URL links of some videos in this dataset are no longer valid. Check the availability and generate this file: [anet_missing_videos.npy](https://github.com/Finspire13/CMCS-Temporal-Action-Localization/tree/master/misc/anet_missing_videos.npy).
 
 ## Run
 
@@ -73,7 +73,10 @@ Our method is evaluated on THUMOS14 and ActivityNet with I3D or UNT features. Ex
 
 ## Trained Models
 
-Our trained models are provided [in this folder](https://github.com/Finspire13/Weakly-Action-Detection/tree/Release-CVPR19/models). To use these trained models, run `test.py` and `detect.py` with the config files [in this folder](https://github.com/Finspire13/Weakly-Action-Detection/tree/Release-CVPR19/configs/trained).
+
+
+
+Our trained models are provided [in this folder](https://github.com/Finspire13/CMCS-Temporal-Action-Localization/tree/master/models). To use these trained models, run `test.py` and `detect.py` with the config files [in this folder](https://github.com/Finspire13/CMCS-Temporal-Action-Localization/tree/master/configs/trained).
 
 ## Citation
 @InProceedings{Liu_2019_CVPR,
